@@ -1,1 +1,9 @@
+/*export wahed el font : episode 7*/
 
+.App {
+  min-height: 100vh;
+  display: flex;
+  background-image: url("./Assets/Background.jpg");
+  background-size: cover;
+  background-position: center;
+}
