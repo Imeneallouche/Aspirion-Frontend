@@ -1,14 +1,15 @@
 import "./App.css";
-import { Route } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
-import ChatPage from "./Pages/ChatPage";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import SignInPage from "./Pages/SignInPage";
 
-//exact is used so that the pages to be rendered are the ones that match exactly the path (default:include)
 function App() {
   return (
-    <div className="App">
-      <Route path="/" component={HomePage} exact />
-      <Route path="/chat" component={ChatPage} />
+    <div className="App w-screen h-screen">
+      <Router>
+        <Switch>
+          <Route path="/" component={SignInPage} exact />
+        </Switch>
+      </Router>
     </div>
   );
 }
