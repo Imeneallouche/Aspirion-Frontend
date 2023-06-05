@@ -5,9 +5,9 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
-      "dark-blue": colors.slate["900"],
+      "dark-blue": "#192841",
       blue: "#1c2e4a",
-      purple: "#1EADA5",
+      green: "#1EADA5",
     },
     extend: {},
   },

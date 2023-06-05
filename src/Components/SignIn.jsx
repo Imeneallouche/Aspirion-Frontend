@@ -15,29 +15,37 @@ export default function SignIn() {
 
   return (
     <div className="flex flex-col bg-dark-blue w-fit rounded-xl justify-center items-center">
-      <form action={handleSubmit} className="flex flex-col p-10 justify-center">
-        <div className="flex items-center">
+      <form
+        action={handleSubmit}
+        className="flex flex-col py-10 px-20 justify-center items-center"
+      >
+        <div className="flex items-center my-5">
           <img
             src={require("../Assets/AspirionLogo.png")}
             alt="Logo"
-            className="h-24 w-24"
+            className="h-28 w-28"
           />
-          <h1 className="font-bold m-5 text-lg">ASPIRION</h1>
+          <h1 className="font-bold m-5 text-2xl">ASPIRION</h1>
         </div>
         <input
-          type="text"
-          className="border border-purple rounded-xl my-4 p-2"
+          type="email"
+          placeholder="your email ..."
+          className="border-2 border-green rounded-xl my-4 p-4 w-full text-blue"
         />
         <input
-          type="text"
-          className="border border-purple rounded-xl my-4 p-2"
+          type="password"
+          placeholder="your password ..."
+          className="border-2 border-green rounded-xl my-4 p-4 w-full text-blue"
         />
-        <button type="submit" className="bg-purple p-3 my-4 rounded-xl">
+        <button
+          type="submit"
+          className="bg-green p-5 my-4 rounded-xl w-full hover:bg-blue"
+        >
           Sign In
         </button>
-        <div className="flex justify-between">
+        <div className="flex justify-between my-10">
           <p className="p-2">DON'T HAVE AN ACCOUNT? </p>
-          <button className="p-2 text-purple">Sign Up</button>
+          <button className="p-2 text-green hover:underline">Sign Up</button>
         </div>
       </form>
     </div>
