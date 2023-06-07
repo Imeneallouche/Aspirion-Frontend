@@ -1,16 +1,20 @@
-//import React, { useState } from "react";
-//import axios from "axios";
+import React, { useState } from "react";
+import axios from "axios";
 
 export default function SignIn() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   const handleSubmit = async (e) => {
-    /*
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/SignIn", {});
+      const response = await axios.post("http://localhost:5000/SignIn", {
+        username,
+        password,
+      });
     } catch (err) {
       console.log(err);
     }
-    */
   };
 
   return (
@@ -31,11 +35,15 @@ export default function SignIn() {
           type="email"
           placeholder="your email ..."
           className="border-2 border-green rounded-xl my-4 p-4 w-full text-blue"
+          value={username}
+          onChange={(event) => setUsername(event.target.value)}
         />
         <input
           type="password"
           placeholder="your password ..."
           className="border-2 border-green rounded-xl my-4 p-4 w-full text-blue"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
         />
         <button
           type="submit"
